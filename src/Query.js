@@ -4,6 +4,7 @@ import useQuery from "./useQuery";
 const Query = ({ url, children }) => {
   const { data, statusCode } = useQuery({ url })
 
+  console.log('statusCode:', statusCode)
   if (statusCode === 404) {
     return <Page404 />
   }
